@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".DashboardFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clDashboardsection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+<TextView
+    android:id="@+id/imageShotCount"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textSize="@dimen/_30ssp"
+    android:text="0"
+android:visibility="gone"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+
+    />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintCardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_8sdp"
+            android:background="@drawable/dashboardbackground"
+            android:elevation="@dimen/_20ssp"
+            android:outlineSpotShadowColor="@color/design_default_color_primary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="WOMEN, CHILD SAFETY IS \n             OUR PRIORITY."
+                android:textColor="@color/white"
+                android:textStyle="italic"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/IV_family"
+                app:layout_constraintStart_toStartOf="parent"
+
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/IV_family"
+                android:layout_width="@dimen/_90sdp"
+                android:layout_height="@dimen/_80sdp"
+                android:layout_margin="@dimen/_10sdp"
+                android:src="@drawable/women"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <TextView
+            android:id="@+id/tvDashboard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="@dimen/_30sdp"
+            android:background="@drawable/tvdashboardbackground"
+            android:text=" Dashboard "
+            android:textColor="@color/white"
+            android:textSize="@dimen/_20ssp"
+
+            app:layout_constraintBottom_toTopOf="@+id/cvGPS"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.039"
+            app:layout_constraintStart_toStartOf="@id/constraintCardView"
+            app:layout_constraintTop_toBottomOf="@+id/constraintCardView" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_4sdp"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:layout_marginRight="@dimen/_8sdp"
+            android:background="@color/purple_200"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="@+id/tvDashboard" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvGPS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="@dimen/_10sdp"
+            app:cardElevation="@dimen/_10sdp"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintEnd_toStartOf="@+id/cvMMS"
+            app:layout_constraintStart_toStartOf="parent"
+
+            app:layout_constraintTop_toBottomOf="@+id/tvDashboard">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+
+                android:id="@+id/clGPS"
+                android:layout_width="@dimen/_110sdp"
+                android:layout_height="@dimen/_120sdp"
+                android:layout_margin="@dimen/_8sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvDashboard">
+
+                <ImageView
+                    android:id="@+id/ivLocation"
+                    android:layout_width="@dimen/_75sdp"
+                    android:layout_height="@dimen/_75sdp"
+
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_location"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="Share GPS \n Location"
+                    android:textColor="@color/purple_700"
+                    android:textSize="@dimen/_18ssp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ivLocation" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvMMS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="@dimen/_10sdp"
+            app:cardElevation="@dimen/_10sdp"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvDashboard">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+
+                android:id="@+id/clMMS"
+                android:layout_width="@dimen/_110sdp"
+                android:layout_height="@dimen/_120sdp"
+                android:layout_margin="@dimen/_8sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvDashboard">
+
+                <ImageView
+                    android:id="@+id/ivMMS"
+                    android:layout_width="@dimen/_75sdp"
+                    android:layout_height="@dimen/_75sdp"
+
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_mms"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvMMS"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Snapshot of Intruders"
+                    android:textAlignment="center"
+                    android:textColor="@color/purple_700"
+                    android:textSize="@dimen/_18ssp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ivMMS" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvEmergency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="@dimen/_10sdp"
+            app:cardElevation="@dimen/_10sdp"
+            app:cardUseCompatPadding="true"
+
+            app:layout_constraintEnd_toStartOf="@+id/cvMessageCommunity"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cvGPS">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+
+                android:id="@+id/clEmergency"
+                android:layout_width="@dimen/_110sdp"
+                android:layout_height="@dimen/_120sdp"
+                android:layout_margin="@dimen/_8sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvDashboard">
+
+                <ImageView
+                    android:id="@+id/ivEmergency"
+                    android:layout_width="@dimen/_75sdp"
+                    android:layout_height="@dimen/_75sdp"
+
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_emergency"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvEmergency"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Emergency"
+                    android:textAlignment="center"
+                    android:textColor="@color/purple_700"
+                    android:textSize="@dimen/_18ssp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ivEmergency" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvMessageCommunity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="@dimen/_10sdp"
+            app:cardElevation="@dimen/_10sdp"
+            app:cardUseCompatPadding="true"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cvMMS">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+
+                android:id="@+id/clMessageCommunity"
+                android:layout_width="@dimen/_110sdp"
+                android:layout_height="@dimen/_120sdp"
+                android:layout_margin="@dimen/_8sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvDashboard">
+
+                <ImageView
+                    android:id="@+id/ivMessageCommunity"
+                    android:layout_width="@dimen/_75sdp"
+                    android:layout_height="@dimen/_75sdp"
+
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_message"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvMessageCommunity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Community help"
+                    android:textAlignment="center"
+                    android:textColor="@color/purple_700"
+                    android:textSize="@dimen/_18ssp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ivMessageCommunity" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</FrameLayout>

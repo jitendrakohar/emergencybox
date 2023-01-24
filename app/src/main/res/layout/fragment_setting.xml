@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".settingFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:background="@drawable/settingbackground">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_settings_header"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="@dimen/_91sdp"
+                android:layout_height="@dimen/_29sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:gravity="center"
+                android:text="Settings"
+                android:textColor="#FFE4D9"
+                android:textSize="@dimen/_22ssp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:background="@color/teal_700"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_edit_my_profile"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:visibility="visible"
+            app:layout_constraintTop_toBottomOf="@+id/cl_settings_header">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/iv_edit_my_profile"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_marginLeft="40dp"
+                android:padding="@dimen/_5sdp"
+                android:src="@drawable/img"
+                app:circularflow_radiusInDP="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_edit_my_profile"
+                style="@style/tvSetting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:text="My Profile"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/iv_edit_my_profile"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/iv_edit_my_profile_view"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="40dp"
+                android:layout_marginRight="40dp"
+                android:padding="5dp"
+                android:src="@drawable/next"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginRight="30dp"
+                android:background="#CCD1D1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/tv_edit_my_profile" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_contact"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:visibility="visible"
+            app:layout_constraintTop_toBottomOf="@+id/cl_edit_my_profile">
+
+            <ImageView
+                android:id="@+id/ivcontact"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginLeft="40dp"
+                android:padding="5dp"
+                android:src="@drawable/contacts"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_contact"
+                style="@style/tvSetting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:text="Contact Number"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/ivcontact"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/iv_change_password_view"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="40dp"
+                android:layout_marginRight="40dp"
+                android:padding="5dp"
+                android:src="@drawable/next"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginRight="30dp"
+                android:background="#CCD1D1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/tv_contact" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_notifications"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:visibility="visible"
+            app:layout_constraintTop_toBottomOf="@+id/cl_contact">
+
+            <ImageView
+                android:id="@+id/iv_notifications"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginLeft="40dp"
+                android:padding="5dp"
+                android:src="@drawable/bell"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_notifications"
+                style="@style/tvSetting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:text="notifications"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/iv_notifications"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/iv_notifications_view"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="40dp"
+                android:layout_marginRight="40dp"
+                android:padding="5dp"
+                android:src="@drawable/next"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginRight="30dp"
+                android:background="#CCD1D1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/tv_notifications" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_contact_us"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+
+            android:layout_marginTop="@dimen/_15sdp"
+            android:visibility="visible"
+            app:layout_constraintTop_toBottomOf="@+id/cl_notifications">
+
+            <ImageView
+                android:id="@+id/iv_contact_us"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginLeft="@dimen/_40sdp"
+                android:padding="5dp"
+                android:src="@drawable/email"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_contact_us"
+                style="@style/tvSetting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20ssp"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:text="contact_us"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/iv_contact_us"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/iv_contact_us_view"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="40dp"
+                android:layout_marginRight="40dp"
+                android:padding="5dp"
+                android:src="@drawable/next"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginRight="30dp"
+                android:background="#CCD1D1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/tv_contact_us" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_terms_and_conditions"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:visibility="visible"
+            app:layout_constraintTop_toBottomOf="@+id/cl_contact_us">
+
+            <ImageView
+                android:id="@+id/iv_terms_and_conditions"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginLeft="40dp"
+                android:padding="5dp"
+                android:src="@drawable/clipboard"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_terms_and_conditions"
+                style="@style/tvSetting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:text="terms_conditions"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/iv_terms_and_conditions"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/iv_terms_and_conditions_view"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="40dp"
+                android:layout_marginRight="40dp"
+                android:padding="5dp"
+                android:src="@drawable/next"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginRight="30dp"
+                android:background="#CCD1D1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/tv_terms_and_conditions" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_privacy_policy"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:visibility="visible"
+            app:layout_constraintTop_toBottomOf="@+id/cl_terms_and_conditions">
+
+            <ImageView
+                android:id="@+id/iv_privacy_policy"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginLeft="40dp"
+                android:padding="5dp"
+                android:src="@drawable/verified"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_privacy_policy"
+                style="@style/tvSetting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:text="privacy_policy"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/iv_privacy_policy"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/iv_privacy_policy_view"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="40dp"
+                android:layout_marginRight="40dp"
+                android:padding="5dp"
+                android:src="@drawable/next"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginRight="30dp"
+                android:background="#CCD1D1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/tv_privacy_policy" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_sign_out"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:visibility="visible"
+            app:layout_constraintTop_toBottomOf="@+id/cl_privacy_policy">
+
+            <ImageView
+                android:id="@+id/iv_sign_out"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginLeft="40dp"
+                android:padding="5dp"
+                android:src="@drawable/logout"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_sign_out"
+                style="@style/tvSetting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:text="sign_out"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/iv_sign_out"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/iv_sign_out_view"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="40dp"
+                android:layout_marginRight="40dp"
+                android:padding="5dp"
+                android:src="@drawable/next"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:background="#CCD1D1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>
